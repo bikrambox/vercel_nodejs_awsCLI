@@ -7,6 +7,7 @@
     "@vercel/node": "^2.9.6",
     "typescript": "^4.7.3",
     "express": "*",
+    "fs": "*",
     "body-parser": "*"
   }
 }
