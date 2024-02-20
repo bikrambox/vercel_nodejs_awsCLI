@@ -11,17 +11,17 @@ const fs = require('fs');
 
 // Define the handler function
 export default function handler(req: VercelRequest, res: VercelResponse) {
-  // Read the HTML file from the filesystem
-    fs.readFile('/index.html', 'utf8', (err, data) => {
-        if (err) {
-              // Handle error if the file cannot be read
-                    res.status(500).json({ error: 'Internal Server Error' });
-                        } else {
-                              // Send the HTML content as a response
+        // Read the HTML file from the filesystem
+          fs.readFile('./index.html', 'utf8', (err, data) => {
+              if (err) {
+                    console.error('Error reading file:', err);
+                          res.status(500).json({ error: 'Internal Server Error' });
+                              } else {
                                     res.status(200).send(data);
                                         }
                                           });
                                           }
+
 
 
 
